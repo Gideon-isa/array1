@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Arrays in Javascript</title>
+</head>
+<body>
+    <h1>Working with Arrays in Javascript</h1>
+
+    <button id="btn1">Array</button>
+    <BUtton id="btn2">Sum and Product</BUtton>
+
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+
+        btn1.addEventListener("click", table1);
+        btn2.addEventListener("click", sumProduct);
+
+        function table1() {
+            let num = [[1, 2, 2, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+
+            for(let i = 0; i < num.length; i++){
+                document.write(`<li>row ${i}</li>`);
+                for(let k = 0; k < num[i]; k++){
+                    document.write(`<li>${num[i][k]}</li>`);
+                }
+            }
+        }
+
+        function sumProduct(){
+            let num = [5, 6, 3, 8, 6, 7];
+            product = 1
+            sum = 0;
+            for(let i = 0; i < num.length; i++){
+                sum = sum + num[i];    
+            }
+
+            document.write(`The sum of 5, 6, 3, 8, 6, 7 is ${sum} and the product is`)
+
+            for(let i = 0; i < num.length; i++){
+                product = product * num[i];
+            }
+            document.write(`The product of 5, 6, 3, 8, 6, and 7 is ${product}`)
+            
+        }
+    </script>
+</body>
+</html>
